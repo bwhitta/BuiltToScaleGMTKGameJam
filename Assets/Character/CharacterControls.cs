@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterControls : MonoBehaviour
 {
     [SerializeField] private float speed, jumpVelocity;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
     private Rigidbody2D _playerRigidbody;
     private Rigidbody2D PlayerRigidbody
     {
@@ -18,9 +20,9 @@ public class CharacterControls : MonoBehaviour
         }
     }
 
-    private bool Grounded => PlayerRigidbody.velocity.y == 0;
-    
-    void Update()
+    private bool Grounded => Physics2D.OverlapCircle(groundCheck.position, 0.01f, groundLayer) != null;
+
+    void FixedUpdate()
     {
         // Reset velocity
         PlayerRigidbody.velocity *= new Vector2(0, 1);
@@ -36,6 +38,7 @@ public class CharacterControls : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W) && Grounded)
         {
+            PlayerRigidbody.velocity *= new Vector2(1, 0);
             PlayerRigidbody.velocity += jumpVelocity * Screen.currentResolution.height * Vector2.up/Screen.height;
         }
     }

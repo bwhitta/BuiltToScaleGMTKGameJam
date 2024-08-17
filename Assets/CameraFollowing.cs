@@ -6,14 +6,15 @@ public class CameraFollowing : MonoBehaviour
 {
     [SerializeField] private Transform character;
     [SerializeField] private float followTime = 0.3F;
-    
-    [SerializeField] private float scaledPositionY, relativePositionZ;
+
+    [SerializeField] private float scaledPositionY;
+    [SerializeField] private float relativePositionZ;
     private Vector2 velocity = Vector2.zero;
 
     void Update()
     {
-        float positionY = scaledPositionY * (Screen.height / Screen.currentResolution.height);
-        Vector3 relativePosition = new(0, positionY, relativePositionZ);
+        //float positionY = scaledPositionY * (Screen.height / Screen.currentResolution.height); <- temporarily removed
+        Vector3 relativePosition = new(0, 0/*positionY*/, relativePositionZ);
 
         // Choose the target position
         Vector3 targetPosition = character.TransformPoint(relativePosition);
