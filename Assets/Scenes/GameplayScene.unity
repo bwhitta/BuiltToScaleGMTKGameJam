@@ -371,7 +371,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 20c17f331134d1244900bce9d991d684, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 444578257}
-  followTime: 0.5
+  followTime: 0.25
   scaledPositionY: 5
   relativePositionZ: -10
 --- !u!65 &1456669238
