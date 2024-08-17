@@ -37,8 +37,8 @@ public class CharacterScale : MonoBehaviour
             resolutionCheckCountdown = resolutionCheckFrequency;
             currentResolutionHeight = Screen.currentResolution.height;
         }
-        
-        transform.localScale = RelativeCharacterSize;
+
+        transform.localScale = new Vector3(RelativeCharacterSize.x, RelativeCharacterSize.y, transform.localScale.z);
         PlayerRigidbody.gravityScale = (currentResolutionHeight / Screen.height) * gravityPower;
     }
 }
