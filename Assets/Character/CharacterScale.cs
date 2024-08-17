@@ -27,7 +27,6 @@ public class CharacterScale : MonoBehaviour
         }
     }
 
-
     // Monobehavior Methods
     void Update()
     {
