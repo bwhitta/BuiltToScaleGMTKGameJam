@@ -8,14 +8,17 @@ public class CharacterControls : MonoBehaviour
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    private Vector2 startingPosition;
 
     private Rigidbody2D playerRigidbody;
 
-    private bool Grounded => Physics2D.OverlapCircle(groundCheck.position, 0.01f, groundLayer) != null;
+    public bool Grounded => Physics2D.OverlapCircle(groundCheck.position, 0.01f, groundLayer) != null;
     private void Start()
     {
+        startingPosition = transform.position;
         playerRigidbody = GetComponent<Rigidbody2D>();
     }
+
     void FixedUpdate()
     {
         // Reset velo  city
@@ -35,5 +38,11 @@ public class CharacterControls : MonoBehaviour
             playerRigidbody.velocity *= new Vector2(1, 0);
             playerRigidbody.velocity += jumpVelocity * Screen.currentResolution.height * Vector2.up / Screen.height;
         }
+    }
+
+    public void Kill()
+    {
+        Debug.Log($"player death");
+        transform.position = startingPosition;
     }
 }

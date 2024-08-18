@@ -29,12 +29,10 @@ public class CameraMovement : MonoBehaviour
         // Choose the target position
         float cameraTargetX = cameraFullWidth * offsetPercent.x * transform.lossyScale.x;
         float cameraTargetY =  cameraFullHeight * offsetPercent.y * transform.lossyScale.y;
-
-        Vector3 targetPosition = character.position + new Vector3(cameraTargetX, cameraTargetY, 0);
         
         // Move the camera towards that position
-        Vector2 position2d = Vector2.SmoothDamp(transform.position, targetPosition, ref velocity, followTime);
-        
+        Vector2 position2d = Vector2.SmoothDamp(transform.position, character.position + new Vector3(cameraTargetX, cameraTargetY, 0), ref velocity, followTime);
+
         // The z position is locked, since it shouldn't really ever change in this game.
         transform.position = new Vector3(position2d.x, position2d.y, zPosition);
     }
