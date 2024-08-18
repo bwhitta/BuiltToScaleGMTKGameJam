@@ -2,19 +2,27 @@ using UnityEngine;
 
 public class AdaptAttributes : MonoBehaviour
 {
-    [SerializeField] private float gravityPower;
+    [SerializeField] private float gravityPower = 1;
 
-    private Rigidbody2D playerRigidbody;
+    private Rigidbody2D usedRigidbody;
+    [SerializeField] bool onEnemy;
     private CharacterControls characterControls;
+    private EnemyLogic enemyLogic;
 
     private void Start()
     {
-        playerRigidbody = GetComponent<Rigidbody2D>();
-        characterControls = GetComponent<CharacterControls>();
+        usedRigidbody = GetComponent<Rigidbody2D>();
+        if(onEnemy)
+            enemyLogic = GetComponent<EnemyLogic>();
+        else
+            characterControls = GetComponent<CharacterControls>();
     }
     void Update()
     {
-        playerRigidbody.gravityScale = (ResolutionManager.height / Screen.height) * gravityPower;
-        characterControls.speed = characterControls.baseSpeed * (ResolutionManager.height / Screen.height);
+        usedRigidbody.gravityScale = (ResolutionManager.height / Screen.height) * gravityPower;
+        if(onEnemy)
+            enemyLogic.speed = enemyLogic.baseSpeed * (ResolutionManager.height / Screen.height);
+        else
+            characterControls.speed = characterControls.baseSpeed * (ResolutionManager.height / Screen.height);
     }
 }

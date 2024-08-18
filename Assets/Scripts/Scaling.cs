@@ -2,19 +2,16 @@ using UnityEngine;
 
 public class Scaling : MonoBehaviour
 {
-    // Fields
-    private Vector2 characterScale;
-
     // Properties
-    private Vector2 RelativeCharacterSize => characterScale * (ResolutionManager.height / Screen.height);
+    private Vector2 RelativeScale => Vector2.one * ResolutionManager.height / Screen.height;
 
     // Monobehavior Methods
-    private void Start()
-    {
-        characterScale = transform.localScale;
-    }
     private void Update()
     {
-        transform.localScale = new Vector3(RelativeCharacterSize.x, RelativeCharacterSize.y, transform.localScale.z);
+        // Bugs out in first few frames so they are skipped.
+        if (Time.frameCount > 3)
+        {
+            transform.localScale = new Vector3(RelativeScale.x, RelativeScale.y, transform.localScale.z);
+        }
     }
 }

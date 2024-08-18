@@ -21,6 +21,10 @@ public class CharacterControls : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Time.frameCount <= 3)
+        {
+            return;
+        }
         // Reset velo  city
         playerRigidbody.velocity *= new Vector2(0, 1);
 
