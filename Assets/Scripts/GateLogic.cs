@@ -21,7 +21,7 @@ public class GateLogic : MonoBehaviour
         set
         {
             _amountMoved = Mathf.Clamp(value, 0, amountToMove);
-            transform.localPosition = new Vector3(startingPosition.x, startingPosition.y + _amountMoved, startingPosition.z);
+            transform.localPosition = startingPosition + (gameObject.transform.up * _amountMoved);
         }
     }
 

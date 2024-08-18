@@ -37,16 +37,13 @@ public class ButtonLogic : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log($"collision entered");
         if (collision.gameObject.layer == characterLayer || collision.gameObject.layer == enemyLayer)
         {
-            Debug.Log($"buttonPushed");
             ButtonPushed = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log($"buttonReleased");
         if (collision.gameObject.layer == characterLayer || collision.gameObject.layer == enemyLayer)
         {
             ButtonPushed = false;

@@ -4858,3 +4858,486 @@ AssetImportParameters requested are different than current active one (requested
   custom:scripting/monoscript/fileName/HitboxLogic.cs: 837026b218cf4a54d3041e4aff8d0777 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/precompiled-assembly-types:Assembly-CSharp: 8be2c3386c488ce17acb81a353937368 -> 2067135f865fe7fc8f90f7204c422306
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.296 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.602 seconds
+Domain Reload Profiling: 896ms
+	BeginReloadAssembly (100ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (147ms)
+		LoadAssemblies (179ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (603ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (276ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (46ms)
+			ProcessInitializeOnLoadAttributes (199ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 3.14 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (1.9 MB). Loaded Objects now: 4933.
+Memory consumption went from 155.0 MB to 153.0 MB.
+Total: 2.346000 ms (FindLiveObjects: 0.173200 ms CreateObjectMapping: 0.068500 ms MarkObjects: 1.826400 ms  DeleteObjects: 0.277100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ButtonLogic.cs: 66a6e764014ec31db4d505eaa8b2dab0 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/SpikeLogic.cs: 7b79b334a29fbb59665c8c088cc34a77 -> 2e625115a2cc6d07dd2faf5e597125c8
+  custom:scripting/monoscript/fileName/VerifyExit.cs: 782fc2ca0584b8df20cffbeecba5462b -> 
+  custom:scripting/monoscript/fileName/EnemyLogic.cs: 856d3d8dcffc4ce7752435b36f2a1896 -> 8397cea92c86153cbafc3edad9434196
+  custom:scripting/monoscript/fileName/VerifyDeath.cs: 3e85d974518dce39a0aafcd191f96cbb -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/Door.cs: 89da75c00dd875a160d70ad71da9a2a1 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/ScreenCollider.cs: 3142dcbe60deaf9c44721e9eb3881465 -> 562451a57fa4dc8bae75c71d9d339665
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/GateLogic.cs: 7d3f12d240bd6c1427de74ab51f5769e -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ScriptedTile.cs: 0050d4fa5871d3c08f4b37ce2aff9e6d -> 
+  custom:scripting/monoscript/fileName/HitboxLogic.cs: 837026b218cf4a54d3041e4aff8d0777 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 3b6f9692c2b48ad76bb6ed90da13a40d -> 2067135f865fe7fc8f90f7204c422306
+========================================================================
+Received Import Request.
+  Time since last request: 830.704212 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '01ebbb4f6ad4bd18d0a894a3068f6de7') in 0.001541 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 31.926081 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '01ebbb4f6ad4bd18d0a894a3068f6de7') in 0.000446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '7ec5a6e6f6cf4ee170d8ac752bd5044e') in 0.000417 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.279 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.587 seconds
+Domain Reload Profiling: 864ms
+	BeginReloadAssembly (96ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (138ms)
+		LoadAssemblies (177ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (9ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (587ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (262ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (47ms)
+			ProcessInitializeOnLoadAttributes (185ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 2.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4174 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (1.9 MB). Loaded Objects now: 4937.
+Memory consumption went from 154.7 MB to 152.8 MB.
+Total: 2.251000 ms (FindLiveObjects: 0.188700 ms CreateObjectMapping: 0.061300 ms MarkObjects: 1.686400 ms  DeleteObjects: 0.313600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ButtonLogic.cs: 66a6e764014ec31db4d505eaa8b2dab0 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/SpikeLogic.cs: 7b79b334a29fbb59665c8c088cc34a77 -> 2e625115a2cc6d07dd2faf5e597125c8
+  custom:scripting/monoscript/fileName/VerifyExit.cs: 782fc2ca0584b8df20cffbeecba5462b -> 
+  custom:scripting/monoscript/fileName/EnemyLogic.cs: 856d3d8dcffc4ce7752435b36f2a1896 -> 8397cea92c86153cbafc3edad9434196
+  custom:scripting/monoscript/fileName/VerifyDeath.cs: 3e85d974518dce39a0aafcd191f96cbb -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/Door.cs: 89da75c00dd875a160d70ad71da9a2a1 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/ScreenCollider.cs: 3142dcbe60deaf9c44721e9eb3881465 -> 562451a57fa4dc8bae75c71d9d339665
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/GateLogic.cs: 7d3f12d240bd6c1427de74ab51f5769e -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ScriptedTile.cs: 0050d4fa5871d3c08f4b37ce2aff9e6d -> 
+  custom:scripting/monoscript/fileName/HitboxLogic.cs: 837026b218cf4a54d3041e4aff8d0777 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 3b6f9692c2b48ad76bb6ed90da13a40d -> 2067135f865fe7fc8f90f7204c422306
+========================================================================
+Received Import Request.
+  Time since last request: 15.200364 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '01ebbb4f6ad4bd18d0a894a3068f6de7') in 0.001554 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Spike.prefab
+  artifactKey: Guid(0b8c8b0a23880754bbdb3ca4e502f605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Spike.prefab using Guid(0b8c8b0a23880754bbdb3ca4e502f605) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '8b8636a5b8d766ead479bd831db6e819') in 0.000455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 36.669359 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '01ebbb4f6ad4bd18d0a894a3068f6de7') in 0.000454 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '7ec5a6e6f6cf4ee170d8ac752bd5044e') in 0.000339 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.288 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.572 seconds
+Domain Reload Profiling: 858ms
+	BeginReloadAssembly (101ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (136ms)
+		LoadAssemblies (176ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (572ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (259ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (47ms)
+			ProcessInitializeOnLoadAttributes (183ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 2.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4174 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 37 unused Assets / (1.9 MB). Loaded Objects now: 4941.
+Memory consumption went from 154.7 MB to 152.8 MB.
+Total: 2.290100 ms (FindLiveObjects: 0.200300 ms CreateObjectMapping: 0.081800 ms MarkObjects: 1.724600 ms  DeleteObjects: 0.282700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ButtonLogic.cs: 66a6e764014ec31db4d505eaa8b2dab0 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/SpikeLogic.cs: 7b79b334a29fbb59665c8c088cc34a77 -> 2e625115a2cc6d07dd2faf5e597125c8
+  custom:scripting/monoscript/fileName/VerifyExit.cs: 782fc2ca0584b8df20cffbeecba5462b -> 
+  custom:scripting/monoscript/fileName/EnemyLogic.cs: 856d3d8dcffc4ce7752435b36f2a1896 -> 8397cea92c86153cbafc3edad9434196
+  custom:scripting/monoscript/fileName/VerifyDeath.cs: 3e85d974518dce39a0aafcd191f96cbb -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/Door.cs: 89da75c00dd875a160d70ad71da9a2a1 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/ScreenCollider.cs: 3142dcbe60deaf9c44721e9eb3881465 -> 562451a57fa4dc8bae75c71d9d339665
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/GateLogic.cs: 7d3f12d240bd6c1427de74ab51f5769e -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ScriptedTile.cs: 0050d4fa5871d3c08f4b37ce2aff9e6d -> 
+  custom:scripting/monoscript/fileName/HitboxLogic.cs: 837026b218cf4a54d3041e4aff8d0777 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 3b6f9692c2b48ad76bb6ed90da13a40d -> 2067135f865fe7fc8f90f7204c422306
+========================================================================
+Received Import Request.
+  Time since last request: 17.547178 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '01ebbb4f6ad4bd18d0a894a3068f6de7') in 0.001275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '7ec5a6e6f6cf4ee170d8ac752bd5044e') in 0.000313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 43.520981 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '01ebbb4f6ad4bd18d0a894a3068f6de7') in 0.000329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000009 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '7ec5a6e6f6cf4ee170d8ac752bd5044e') in 0.000257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.798031 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door_Prefab.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door_Prefab.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '54dc2f49a74218c51c1345f16c05aeca') in 0.000407 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '7ec5a6e6f6cf4ee170d8ac752bd5044e') in 0.000258 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.367577 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door_Prefab.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door_Prefab.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '54dc2f49a74218c51c1345f16c05aeca') in 0.000373 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate_Prefab.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate_Prefab.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'c5a8b30667afb60caa5af696b1ed0603') in 0.000273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.536262 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Door_Prefab.prefab
+  artifactKey: Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Door_Prefab.prefab using Guid(3e256148d4d3e2b4184c114d635104dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '54dc2f49a74218c51c1345f16c05aeca') in 0.000334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Gate_Prefab.prefab
+  artifactKey: Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Gate_Prefab.prefab using Guid(904c66f768851fa42be3d188fc96362c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'c5a8b30667afb60caa5af696b1ed0603') in 0.000254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.186031 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Art/Button_pressed.png
+  artifactKey: Guid(49542e7a355db324ea74630d82f8058b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Art/Button_pressed.png using Guid(49542e7a355db324ea74630d82f8058b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '9547091d231077d92e73811d90d3d953') in 0.044945 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Tile Palette/Scripted Tiles/Art/gate.png
+  artifactKey: Guid(9f8e5bc0d874e5545b66d63a7303d70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tile Palette/Scripted Tiles/Art/gate.png using Guid(9f8e5bc0d874e5545b66d63a7303d70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'd0a77eea6f131f4f2de40dd1b30ac5aa') in 0.012125 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 58.690611 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Outline.mat
+  artifactKey: Guid(a00013af81304728b2be1f4309ee2433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Outline.mat using Guid(a00013af81304728b2be1f4309ee2433) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'b31750392b40ebf72616f6044ed1af27') in 0.047372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+  artifactKey: Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'f4cb2b01ea708d4cdc5ce66afceb46f9') in 0.028795 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Drop Shadow.mat
+  artifactKey: Guid(b246c4190f4e46ec9352fe15a7b09ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Drop Shadow.mat using Guid(b246c4190f4e46ec9352fe15a7b09ce0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '78e97ac22c43de5d4107947d035d2078') in 0.018818 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Drop Shadow.mat
+  artifactKey: Guid(f2dcf029949142e28b974630369c8b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Drop Shadow.mat using Guid(f2dcf029949142e28b974630369c8b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'ef75f1b008d4868a5c206cb86c7258bc') in 0.021162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Glow.mat
+  artifactKey: Guid(d75b8f41e959450c84ac6e967084d3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Glow.mat using Guid(d75b8f41e959450c84ac6e967084d3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '3986d1525dff02861712f878f971fea8') in 0.082047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans SDF - Metalic Green.mat
+  artifactKey: Guid(8b29aaa3eec7468097ff07adfcf29ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans SDF - Metalic Green.mat using Guid(8b29aaa3eec7468097ff07adfcf29ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'f47fc1fd864b9161588a87a36889cba8') in 0.097481 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans SDF - Soft Mask.mat
+  artifactKey: Guid(42df1c7856584b6b8db9a509b6b10074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans SDF - Soft Mask.mat using Guid(42df1c7856584b6b8db9a509b6b10074) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '741d16eab7bb503566c8cd5af66affac') in 0.029965 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

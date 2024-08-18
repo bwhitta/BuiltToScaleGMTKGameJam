@@ -15,7 +15,7 @@ public class CharacterControls : MonoBehaviour
     public bool Grounded => Physics2D.OverlapCircle(groundCheck.position, 0.01f, groundLayer) != null;
     private void Start()
     {
-        startingPosition = transform.position;
+        startingPosition = transform.localPosition;
         playerRigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -47,6 +47,6 @@ public class CharacterControls : MonoBehaviour
     public void Kill()
     {
         Debug.Log($"player death");
-        transform.position = startingPosition;
+        transform.localPosition = startingPosition;
     }
 }
