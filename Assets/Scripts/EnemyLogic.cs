@@ -11,6 +11,7 @@ public class EnemyLogic : MonoBehaviour
     private Rigidbody2D body;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform turnaroundCheck;
+    [SerializeField] private Vector2 size = Vector2.one;
 
     void Start()
     {
@@ -22,8 +23,8 @@ public class EnemyLogic : MonoBehaviour
         get
         {
             float[] screenArea = ScreenArea();
-            Debug.Log($"screen left: {screenArea[0]}, screen top: {screenArea[1]}, screen right: {screenArea[2]}, screen bottom: {screenArea[3]}");
-            if (transform.position.x >= screenArea[0] || transform.position.x <= screenArea[2] || transform.position.y >= screenArea[2] || transform.position.y <= screenArea[3])
+            // Debug.Log($"screen left: {screenArea[0]}, screen top: {screenArea[1]}, screen right: {screenArea[2]}, screen bottom: {screenArea[3]}");
+            if (transform.position.x > screenArea[0] && transform.position.x < screenArea[2] && transform.position.y > screenArea[1] && transform.position.y < screenArea[3])
             {
                 return true;
             }
@@ -37,6 +38,7 @@ public class EnemyLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        body.velocity *= new Vector2(0, 1);
         switch (enemyMode)
         {
             case EnemyMode.walk:
@@ -62,22 +64,20 @@ public class EnemyLogic : MonoBehaviour
             case EnemyMode.hover:
                 if (Seen)
                 {
-
+                    body.velocity = Vector2.up * speed;
                 }
                 break;
         }
-        body.velocity *= new Vector2(0, 1);
-        
     }
 
     private float[] ScreenArea()
     {
         var bounds = new float[4]
         {
-            Camera.main.WorldToScreenPoint(Vector2.zero).x,
-            Camera.main.WorldToScreenPoint(Vector2.zero).y,
-            Camera.main.WorldToScreenPoint(new Vector2(Screen.width, Screen.height)).x,
-            Camera.main.WorldToScreenPoint(new Vector2(Screen.width, Screen.height)).y,
+            Camera.main.ScreenToWorldPoint(Vector2.zero).x - (transform.lossyScale.x * size.x * 0.5f),
+            Camera.main.ScreenToWorldPoint(Vector2.zero).y - (transform.lossyScale.y * size.y * 0.5f),
+            Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).x + (transform.lossyScale.x * size.x * 0.5f),
+            Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).y + (transform.lossyScale.y * size.y * 0.5f),
         };
         return bounds;
     }
