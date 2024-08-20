@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonLogic : MonoBehaviour
@@ -9,7 +7,7 @@ public class ButtonLogic : MonoBehaviour
     private Sprite buttonNormalSprite;
     private readonly int characterLayer = 6, enemyLayer = 7;
     private bool _buttonPushed;
-    [HideInInspector] public bool ButtonPushed
+    public bool ButtonPushed
     {
         get
         {

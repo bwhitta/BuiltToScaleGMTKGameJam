@@ -5,10 +5,12 @@ using UnityEngine;
 public class GateLogic : MonoBehaviour
 {
     // Fields
+    [SerializeField] private bool usesButton;
     [SerializeField] private ButtonLogic button;
+    [SerializeField] private LightLogic[] indicatorLights;
     private readonly float amountToMove = 2;
     private Vector3 startingPosition;
-    private readonly float gateSpeed = 10;
+    [SerializeField] private float gateSpeed = 10;
     
     // Properties
     private float _amountMoved;
@@ -32,13 +34,35 @@ public class GateLogic : MonoBehaviour
     }
     private void Update()
     {
-        if (AmountMoved < amountToMove && button.ButtonPushed)
+        if (usesButton)
         {
-            AmountMoved += Time.deltaTime * gateSpeed;
+            if (AmountMoved < amountToMove && button.ButtonPushed)
+            {
+                AmountMoved += Time.deltaTime * gateSpeed;
+            }
+            else if (AmountMoved > 0 && !button.ButtonPushed)
+            {
+                AmountMoved -= Time.deltaTime * gateSpeed;
+            }
         }
-        if (AmountMoved > 0 && !button.ButtonPushed)
+        else
         {
-            AmountMoved -= Time.deltaTime * gateSpeed;
+            bool allLightsOn = true;
+            foreach(LightLogic each in indicatorLights)
+            {
+                if(each.LightOn == false)
+                {
+                    allLightsOn = false;
+                }
+            }
+            if (AmountMoved < amountToMove && allLightsOn)
+            {
+                AmountMoved += Time.deltaTime * gateSpeed;
+            }
+            else if (AmountMoved > 0 && !allLightsOn)
+            {
+                AmountMoved -= Time.deltaTime * gateSpeed;
+            }
         }
     }
 }

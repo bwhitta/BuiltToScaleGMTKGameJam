@@ -7,15 +7,27 @@ public class EnemyLogic : MonoBehaviour
     private bool movingRight = true;
     public float baseSpeed;
     [HideInInspector] public float speed;
-    
-    private Rigidbody2D body;
+    private Sprite movingSprite;
+
+    [Header("Only if walking")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform turnaroundCheck;
-    [SerializeField] private Vector2 size = Vector2.one;
+
+    [Header("Only if flying")]
+    [SerializeField] private Sprite stationarySprite;
+
+
+    private Rigidbody2D body;
+    private BoxCollider2D boxCollider;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        movingSprite = spriteRenderer.sprite;
     }
 
     private bool Seen
@@ -47,12 +59,12 @@ public class EnemyLogic : MonoBehaviour
                     if (movingRight)
                     {
                         body.velocity += Vector2.right * speed;
-                        turnaroundCheck.localPosition = Vector2.right * ((transform.localScale.x * 0.5f) + 0.1f);
+                        turnaroundCheck.localPosition = Vector2.right * ((boxCollider.size.x * 0.5f)/* + 0.1f*/);
                     }
                     else
                     {
                         body.velocity += Vector2.left * speed;
-                        turnaroundCheck.localPosition = Vector2.left * ((transform.localScale.x * 0.5f) + 0.1f);
+                        turnaroundCheck.localPosition = Vector2.left * ((boxCollider.size.x * 0.5f)/* + 0.1f*/);
                     }
                     var collision = Physics2D.OverlapCircle(turnaroundCheck.position, 0.1f, groundLayer);
                     if (collision != null)
@@ -65,6 +77,11 @@ public class EnemyLogic : MonoBehaviour
                 if (Seen)
                 {
                     body.velocity = Vector2.up * speed;
+                    spriteRenderer.sprite = movingSprite;
+                }
+                else 
+                {
+                    spriteRenderer.sprite = stationarySprite;
                 }
                 break;
         }
@@ -74,10 +91,10 @@ public class EnemyLogic : MonoBehaviour
     {
         var bounds = new float[4]
         {
-            Camera.main.ScreenToWorldPoint(Vector2.zero).x - (transform.lossyScale.x * size.x * 0.5f),
-            Camera.main.ScreenToWorldPoint(Vector2.zero).y - (transform.lossyScale.y * size.y * 0.5f),
-            Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).x + (transform.lossyScale.x * size.x * 0.5f),
-            Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).y + (transform.lossyScale.y * size.y * 0.5f),
+            Camera.main.ScreenToWorldPoint(Vector2.zero).x - (transform.lossyScale.x * boxCollider.size.x * 0.5f),
+            Camera.main.ScreenToWorldPoint(Vector2.zero).y - (transform.lossyScale.y * boxCollider.size.y * 0.5f),
+            Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).x + (transform.lossyScale.x * boxCollider.size.x * 0.5f),
+            Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).y + (transform.lossyScale.y * boxCollider.size.x * 0.5f),
         };
         return bounds;
     }

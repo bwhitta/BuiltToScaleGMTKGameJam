@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterControls : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class CharacterControls : MonoBehaviour
     private Vector2 startingPosition;
 
     private Rigidbody2D playerRigidbody;
+    private SpriteRenderer spriteRenderer;
 
     public bool Grounded => Physics2D.OverlapCircle(groundCheck.position, 0.01f, groundLayer) != null;
     private void Start()
     {
         startingPosition = transform.localPosition;
         playerRigidbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -32,15 +35,21 @@ public class CharacterControls : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             playerRigidbody.velocity += Vector2.left * speed;
+            spriteRenderer.flipX = true;
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             playerRigidbody.velocity += Vector2.right * speed;
+            spriteRenderer.flipX = false;
         }
         if (Input.GetKey(KeyCode.W) && Grounded)
         {
             playerRigidbody.velocity *= new Vector2(1, 0);
             playerRigidbody.velocity += jumpVelocity * Screen.currentResolution.height * Vector2.up / Screen.height;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
